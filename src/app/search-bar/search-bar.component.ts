@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
@@ -16,6 +17,6 @@ export class SearchBarComponent implements OnInit {
 
   onFormSubmit(event: any){
     event.preventDefault();
-    console.log(this.term)
+    this.submitted.emit(this.term);
   }
 }
