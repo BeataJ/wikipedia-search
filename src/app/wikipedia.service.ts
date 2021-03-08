@@ -7,7 +7,7 @@ export class WikipediaService {
 
   constructor() { }
 
-  search(term: string) {
+  public search(term: string) {
     return 'I am wikipedia search results'
   }
 }
