@@ -2,6 +2,15 @@ import { Injectable } from '@angular/core';
 import  { HttpClient } from '@angular/common/http';
 import { pluck } from 'rxjs/operators';
 
+interface WikipediaResponse {
+  query: {
+    search: {
+      title: string;
+      snippet: string;
+      pageid: number;
+    } []
+  }
+}
 
 @Injectable({
   providedIn: 'root'
