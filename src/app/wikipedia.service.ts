@@ -20,7 +20,7 @@ export class WikipediaService {
   constructor(private html: HttpClient) { }
 
   public search(term: string) {
-    return this.html.get('https://en.wikipedia.org/w/api.php', {
+    return this.html.get<WikipediaResponse>('https://en.wikipedia.org/w/api.php', {
       params: {
         action: 'query',
         format: 'json',
